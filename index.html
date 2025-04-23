@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pippa's Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Imbue:opsz,wght@10..100,100..900&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       padding: 20px;
     }
 
@@ -29,9 +30,9 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      width: 90%;
+      width: 100%;
+      max-width: 600px;
       aspect-ratio: 1.5;
-      max-width: 550px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -39,7 +40,7 @@
 
     .content {
       text-align: center;
-      font-size: 19px;
+      font-size: 20px;
       line-height: 1.6;
       color: #5c3a4e;
       padding: 30px;
@@ -48,13 +49,14 @@
     .highlight {
       background-color: #EAC6D2;
       padding: 2px 6px;
-      font-weight: semibold;
+      font-weight: 600;
+      border-radius: 4px;
     }
 
     .fancy {
       font-family: "Gwendolyn", cursive;
-      font-weight: bold;
-      font-size: 38px;
+      font-weight: 700;
+      font-size: 42px;
       background: linear-gradient(180deg, #5d012f, #7B2751);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -67,8 +69,28 @@
     }
 
     img.emoji {
-      height: 22px;
+      height: 24px;
       vertical-align: middle;
+    }
+
+    @media screen and (max-width: 480px) {
+      .card {
+        aspect-ratio: 1.3;
+        max-width: 90%;
+      }
+
+      .content {
+        font-size: 22px;
+        padding: 20px;
+      }
+
+      .fancy {
+        font-size: 48px;
+      }
+
+      img.emoji {
+        height: 26px;
+      }
     }
   </style>
 </head>
